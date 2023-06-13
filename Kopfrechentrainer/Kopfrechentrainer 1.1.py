@@ -47,8 +47,9 @@ while(True):
         
         result_human = (input("What is your result?"))      
 
-        result_human_1 = int(result_human)  
+        result_human_1 = str(result_human)  
         
+        calculate_2 = str(calculate)
              
         if result_human == calculate  :
                 print ("correct")
