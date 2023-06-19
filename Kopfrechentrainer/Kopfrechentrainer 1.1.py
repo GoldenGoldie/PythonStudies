@@ -5,8 +5,8 @@ print("what do you want to learn?")
 while(True):
     control_1 = False
 
-    mode = (input("Do you want the easy or hard mode?"))
-    if mode == "hard ":
+    mode = str(input("Do you want the easy or hard mode?"))
+    if mode == "hard":
          control_1 = True
     
     if mode == "easy":
@@ -15,13 +15,14 @@ while(True):
     if control_1 == False:
          print ("don't do this!")
     if control_1:
-        calculation = (input("Show me the calculation symbol: "))
+        calculation = (input("Do you want to practice +, -, *, / or squaring: "))
     
     
                                
         if calculation == "end":
            break
     
+
         if mode == "easy":
      
             if calculation == "*":
@@ -50,6 +51,13 @@ while(True):
                 number_2 = random.randrange(2)
                 calculate = (number_1 / number_2)
                 print(f"{number_1} / {number_2}")
+                control_1 = True
+
+            if calculation == "squaring":
+                number_1 = random.randrange(1,10)
+                number_2 = number_1
+                calculate = (number_1 * number_2)
+                print(f"{number_1} * {number_2}")
                 control_1 = True
     
         if mode == "hard":
@@ -82,6 +90,13 @@ while(True):
              claculate = (number_1 / number_2)
              print(f"{number_1} / {number_2}")   
              control_1 = True      
+
+            if calculation == "squaring":
+                number_1 = random.randrange(10,30)
+                number_2 = number_1 
+                calculate = (number_1 * number_2)
+                print(f"{number_1} * {number_2}")
+                control_1 = True
         
     
 
