@@ -7,6 +7,8 @@ end_control = True
 while(True):
     control_1 = False
 
+    
+
     mode = str(input("Do you want the easy or hard mode?"))
     if mode == "hard":
          control_1 = True
@@ -17,7 +19,7 @@ while(True):
     if control_1 == False:
          print ("don't do this!")
     if control_1:
-        calculation = (input("Do you want to practice +, -, *, / or squaring: "))
+        calculation = (input("Do you want to practice +, -, *, / or squaring and you can stop practicing if you enter end: "))
         
         print("How many calculations do you want to do?")
 
@@ -57,6 +59,31 @@ while(True):
             loop_count = 6 
             control_1 = True
             loops_control = True
+
+        if loop_count =="7":
+            loop_count = 7
+            control_1 = True
+            loops_control = True
+
+        if loop_count == "8":
+            loop_count = 8
+            control_1 = True
+            loops_control = True
+
+        if loop_count ==  "9":
+            loop_count = 9
+            control_1 = True
+            loops_control = True
+
+        if loop_count =="10":
+            loop_count = 10
+            control_1 = True
+            loops_control = True
+
+        
+        if control_1 == False:
+            loops_control = False 
+            print ("Do not do this!")
                                
         if calculation == "end":
            break
