@@ -2,6 +2,8 @@ import random
 
 print("what do you want to learn?")
 
+end_control = True
+
 while(True):
     control_1 = False
 
@@ -17,14 +19,49 @@ while(True):
     if control_1:
         calculation = (input("Do you want to practice +, -, *, / or squaring: "))
         
-        loop_count = str(input("How often do you want to practise?"))
-    
-        loops = "1"
+        print("How many calculations do you want to do?")
+
+        loop_count = str(input("Between 1 and 10 "))
+        
+        loops_control = False
+
+        loops = 0
+
+        if loop_count == "1":
+            loop_count = 1
+            control_1 = True
+            loops_control = True
+
+        if loop_count == "2":
+            loop_count = 2
+            control_1 = True
+            loops_control = True
+        
+        if loop_count == "3":
+            loop_count = 3
+
+            control_1 = True
+            loops_control = True
+        
+        if loop_count == "4":
+            loop_count = 4
+            control_1 = True
+            loops_control = True
+
+        if loop_count == "5":
+            loop_count = 5
+            control_1 = 1 
+            loops_control = True
+
+        if loop_count =="6":
+            loop_count = 6 
+            control_1 = True
+            loops_control = True
                                
         if calculation == "end":
            break
         
-        loops_control = True
+        
 
         while(loops_control):
 
@@ -129,13 +166,12 @@ while(True):
                  print(calculate_2)
                  control_1 = True
 
-                loop_count_2 = int(loop_count)
+                loops += 1
 
-                loops = int(loops)
+                loops_control = (loop_count != loops )
 
-                loops_1 = loops + 1
+                
 
-
-                loops = loops_1
-
-                loops_control = (loops <= loop_count_2)
+            if loops_control == False:
+                end_control = False
+                
