@@ -9,89 +9,123 @@ while(True):
 
     
 
-    mode = str(input("Do you want the easy or hard mode?"))
+    mode = str(input("Do you want the easy or hard mode or the random mode?"))
+    control_2 = False
+
     if mode == "hard":
          control_1 = True
-    
+         control_2 = True
     if mode == "easy":
          control_1 = True
+         control_2 = True
+
+    if mode == "random":
+        control_1 = True
+        control_2 = False
 
     if control_1 == False:
          print ("don't do this!")
-    if control_1:
-        calculation = (input("Do you want to practice +, -, *, / or squaring and you can stop practicing if you enter end: "))
+    if control_2:
+        calculation = (input("Do you want to practice +, -, *, / or squaring you can also choose the random mode and you can stop practicing if you enter end: "))
+
+    if control_2 == False:
+         calculation = "end"    
         
-        print("How many calculations do you want to do?")
+    print("How many calculations do you want to do?")
 
-        loop_count = str(input("Between 1 and 10 "))
+    loop_count = str(input("Between 1 and 10 "))
         
-        loops_control = False
+    loops_control = False
 
-        loops = 0
+    loops = 0
 
-        if loop_count == "1":
+        
+
+    if loop_count == "1":
             loop_count = 1
             control_1 = True
             loops_control = True
 
-        if loop_count == "2":
+    if loop_count == "2":
             loop_count = 2
             control_1 = True
             loops_control = True
         
-        if loop_count == "3":
+    if loop_count == "3":
             loop_count = 3
 
             control_1 = True
             loops_control = True
         
-        if loop_count == "4":
+    if loop_count == "4":
             loop_count = 4
             control_1 = True
             loops_control = True
 
-        if loop_count == "5":
+    if loop_count == "5":
             loop_count = 5
             control_1 = 1 
             loops_control = True
 
-        if loop_count =="6":
+    if loop_count =="6":
             loop_count = 6 
             control_1 = True
             loops_control = True
 
-        if loop_count =="7":
+    if loop_count =="7":
             loop_count = 7
             control_1 = True
             loops_control = True
 
-        if loop_count == "8":
+    if loop_count == "8":
             loop_count = 8
             control_1 = True
             loops_control = True
 
-        if loop_count ==  "9":
+    if loop_count ==  "9":
             loop_count = 9
             control_1 = True
             loops_control = True
 
-        if loop_count =="10":
+    if loop_count =="10":
             loop_count = 10
             control_1 = True
             loops_control = True
 
         
-        if control_1 == False:
+    if control_1 == False:
             loops_control = False 
             print ("Do not do this!")
                                
-        if calculation == "end":
+    if calculation == "end":
            break
         
         
 
-        while(loops_control):
+    while(loops_control):
 
+            if calculation == "random":
+
+                random_1 = random.randrange(1,2)
+                random_2 = random.randrange(1,5)
+                if random_1 == 1:
+                    mode = "easy"
+
+                if random_1 == 2:
+                    mode = "hard"
+
+                if random_2 == 1:
+                    calculation = "+"
+
+                if random_2 == 2:
+                    calculation = "-"
+
+                if random_2 == 3:
+                    calculation = "*"
+
+                if random_2 == 4:
+                    calculation = "/"
+                    
             if mode == "easy":
      
                 if calculation == "*":
