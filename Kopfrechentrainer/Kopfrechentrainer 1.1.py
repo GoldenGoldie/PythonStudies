@@ -22,14 +22,16 @@ while(True):
     if mode == "random":
         control_1 = True
         control_2 = False
+        calculation = "easy"
+        mode_2 = "random"
 
     if control_1 == False:
          print ("don't do this!")
     if control_2:
         calculation = (input("Do you want to practice +, -, *, / or squaring you can also choose the random mode and you can stop practicing if you enter end: "))
 
-    if control_2 == False:
-         calculation = "end"    
+    if control_1 == False:
+     calculation = "end"    
         
     print("How many calculations do you want to do?")
 
@@ -99,32 +101,49 @@ while(True):
                                
     if calculation == "end":
            break
+    
+    if mode == "random":
+         mode_2 = "random"
+         calculation = "+"
+
+
+
+    if mode == "easy":
+         mode_2 = "easy"
+    
+    if mode == "hard":
+         mode_2 = "hard"
         
         
 
     while(loops_control):
+            
 
-            if calculation == "random":
+            if mode_2 == "random":
+                random_1  = random.randrange(1,3)
 
-                random_1 = random.randrange(1,2)
-                random_2 = random.randrange(1,5)
+                random_2 = random.randrange(1,6)
+
                 if random_1 == 1:
-                    mode = "easy"
+                 mode = "easy"
 
                 if random_1 == 2:
-                    mode = "hard"
+                 mode = "hard"
 
                 if random_2 == 1:
-                    calculation = "+"
+                 calculation = "+"
 
                 if random_2 == 2:
-                    calculation = "-"
+                 calculation = "-"
 
                 if random_2 == 3:
-                    calculation = "*"
+                 calculation = "*"
 
                 if random_2 == 4:
-                    calculation = "/"
+                 calculation = "/"
+
+                if random_2 == 5:
+                 calculation = "squaring"
                     
             if mode == "easy":
      
@@ -162,6 +181,8 @@ while(True):
                     calculate = (number_1 * number_2)
                     print(f"{number_1} * {number_2}")
                     control_1 = True
+
+
     
             if mode == "hard":
          
@@ -200,6 +221,8 @@ while(True):
                     calculate = (number_1 * number_2)
                     print(f"{number_1} * {number_2}")
                     control_1 = True
+
+            
         
     
 
@@ -230,6 +253,8 @@ while(True):
                 loops += 1
 
                 loops_control = (loop_count != loops )
+
+                
 
                 
 
