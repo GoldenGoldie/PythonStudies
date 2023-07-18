@@ -1,5 +1,4 @@
-import random
+i = ["hallo", "Welt"]
 
-x = random.randrange(1,3)
-
-print(x)
+if(i.__contains__("hallo")):
+    print("Hallo")
