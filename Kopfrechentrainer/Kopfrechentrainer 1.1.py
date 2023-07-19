@@ -1,6 +1,8 @@
 import random
 
+import time
 
+finaltime = 0
 
 print("what do you want to learn?")
 
@@ -41,7 +43,7 @@ while True:
         )
 
     if control_1 == False:
-        calculation = "end"
+        calculationsymbol = "end"
 
     if calculationsymbol == "end":
         break
@@ -67,6 +69,9 @@ while True:
 
 
     while loops_control:
+
+        time_1 = time.time()
+
         if mode == "random":
             random_1 = random.randrange(1, 3)
 
@@ -185,11 +190,20 @@ while True:
             if result_human == calculate_2:
                 print("correct")
                 control_1 = True
+                
 
             if result_human_1 != calculate_2:
                 print("wrong")
                 print(calculate_2)
                 control_1 = True
+
+            time_2 = time.time()
+
+            endtime = time_2 - time_1
+
+            print(f"you did it in  {endtime} seconds")
+
+            finaltime = endtime + finaltime
 
             loops += 1
 
@@ -197,3 +211,5 @@ while True:
 
         if loops_control == False:
             end_control = False
+            print(f"your final time is {finaltime}")
+
