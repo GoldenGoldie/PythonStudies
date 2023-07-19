@@ -1,13 +1,27 @@
 import time
 
-Ergebniss_1 = time.time()
+fisch = True
 
-input("Hello")
+Endergebniss_2 = 0
 
-Ergebniss_2 = time.time()
+while (fisch):
 
-Endergebniss = Ergebniss_2 - Ergebniss_1
+    
 
-Endergebniss = int(Endergebniss)
+    Ergebniss_1 = time.time()
 
-print(Endergebniss)
+    input("Hello")
+
+    Ergebniss_2 = time.time()
+
+    Endergebniss = Ergebniss_2 - Ergebniss_1
+
+    Endergebniss = int(Endergebniss)
+
+    Endergebniss_2 = Endergebniss_2 + Endergebniss
+
+
+    if Endergebniss_2 > 20:
+        fisch = False
+
+    print(Endergebniss)
