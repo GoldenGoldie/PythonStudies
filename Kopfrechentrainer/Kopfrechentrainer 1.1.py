@@ -1,5 +1,7 @@
 import random
 
+
+
 print("what do you want to learn?")
 
 end_control = True
