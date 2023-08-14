@@ -1,27 +1,30 @@
-import time
+import random
 
-fisch = True
+calculationsymbol = input ("hello")
 
-Endergebniss_2 = 0
+calculate = 0
 
-while (fisch):
+number_1 = random.randrange(1,15)
 
-    
+number_2 = random.randrange(1,5)
 
-    Ergebniss_1 = time.time()
+c = 0
 
-    input("Hello")
+def Calculation():
+    if calculationsymbol == "+":
+       return number_1 + number_2 
+        
+    if calculationsymbol == "-":
+        i = number_1 - number_2
 
-    Ergebniss_2 = time.time()
+    if calculationsymbol == "*":
+        i = number_1 * number_2
 
-    Endergebniss = Ergebniss_2 - Ergebniss_1
-
-    Endergebniss = int(Endergebniss)
-
-    Endergebniss_2 = Endergebniss_2 + Endergebniss
+    if calculationsymbol == "/":
+        i = number_1 / number_2 
 
 
-    if Endergebniss_2 > 20:
-        fisch = False
+c = Calculation()
 
-    print(Endergebniss)
+print(c)
+
