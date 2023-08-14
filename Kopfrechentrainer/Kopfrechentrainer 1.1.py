@@ -9,6 +9,24 @@ print("what do you want to learn?")
 end_control = True
 
 
+def Calculation():
+        print(f" {number_1} {calculationsymbol} {number_2}")
+
+        if calculationsymbol == "+":
+            return  number_1 + number_2 
+        
+        if calculationsymbol == "-":
+            return number_1 - number_2
+
+        if calculation == "*":
+            return number_1 * number_2
+
+        if calculationsymbol == "/":
+            return number_1 / number_2 
+        
+        if calculationsymbol == "squaring":
+            return number_1 * number_2
+
 def CheckIfIsDigit(i):
     if i.isdigit():
         return int(i)
@@ -38,9 +56,7 @@ while True:
     if control_1 == False:
         print("don't do this!")
     if control_2:
-        calculationsymbol = input(
-            "Do you want to practice +, -, *, / or squaring you can also choose the random mode and you can stop practicing if you enter end: "
-        )
+        calculationsymbol = input("Do you want to practice +, -, *, / or squaring you can also choose the random mode and you can stop practicing if you enter end: ")
 
     if control_1 == False:
         calculationsymbol = "end"
@@ -84,19 +100,19 @@ while True:
                 mode = "hard"
 
             if random_2 == 1:
-                calculation = "+"
+                calculationsymbol = "+"
 
             if random_2 == 2:
-                calculation = "-"
+                calculationsymbol = "-"
 
             if random_2 == 3:
-                calculation = "*"
+                calculationsymbol = "*"
 
             if random_2 == 4:
-                calculation = "/"
+                calculationsymbol = "/"
 
             if random_2 == 5:
-                calculation = "squaring"
+                calculationsymbol = "squaring"
 
             control_1 = True
 
@@ -104,74 +120,56 @@ while True:
             if calculationsymbol == "*":
                 number_1 = random.randrange(1, 10)
                 number_2 = random.randrange(1, 20)
-                calculate = number_1 * number_2
-                print(f" { number_2 } * {number_1}")
                 control_1 = True
 
             if calculationsymbol == "+":
                 number_1 = random.randrange(20, 150)
                 number_2 = random.randrange(20, 150)
-                calculate = number_1 + number_2
-                print(f"{number_1} + {number_2}")
                 control_1 = True
 
             if calculationsymbol == "-":
                 number_1 = random.randrange(20, 150)
                 number_2 = random.randrange(20, 75)
-                calculate = number_1 - number_2
-                print(f"{number_1} - {number_2}")
                 control_1 = True
 
             if calculationsymbol == "/":
                 number_1 = random.randrange(25, 150)
                 number_2 = random.randrange(2)
-                calculate = number_1 / number_2
-                print(f"{number_1} / {number_2}")
                 control_1 = True
 
             if calculationsymbol == "squaring":
                 number_1 = random.randrange(1, 10)
                 number_2 = number_1
-                calculate = number_1 * number_2
-                print(f"{number_1} * {number_2}")
                 control_1 = True
 
         if mode == "hard":
             if calculationsymbol == "+":
                 number_1 = random.randrange(50, 500)
                 number_2 = random.randrange(110, 700)
-                calculate = number_1 + number_2
-                print(f"{number_1} + {number_2}")
                 control_1 = True
 
             if calculationsymbol == "-":
                 number_1 = random.randrange(25, 500)
                 number_2 = random.randrange(25, 700)
-                claculate = number_1 - number_2
-                print(f"{number_1} - {number_2}")
                 control_1 = True
 
             if calculationsymbol == "*":
                 number_1 = random.randrange(25, 150)
                 number_2 = random.randrange(2, 25)
-                calculate = number_1 * number_2
-                print(f"{number_1} * {number_2}")
                 control_1 = True
 
             if calculationsymbol == "/":
-                print("You only have to write the first two numbers")
+                print("You only have to write the first numbers in front")
                 number_1 = random.randrange(50, 500)
                 number_2 = random.randrange(2, 20)
-                claculate = number_1 / number_2
-                print(f"{number_1} / {number_2}")
                 control_1 = True
 
             if calculationsymbol == "squaring":
                 number_1 = random.randrange(10, 30)
                 number_2 = number_1
-                calculate = number_1 * number_2
-                print(f"{number_1} * {number_2}")
                 control_1 = True
+
+        calculate = Calculation()
 
         if control_1 == False:
             print("nice try")
@@ -201,9 +199,12 @@ while True:
 
             endtime = time_2 - time_1
 
-            print(f"you did it in  {endtime} seconds")
+            if endtime != finaltime:
+                print(f"you did it in  {endtime} seconds")
 
             finaltime = endtime + finaltime
+
+            
 
             loops += 1
 
