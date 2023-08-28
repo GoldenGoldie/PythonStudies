@@ -199,8 +199,7 @@ while True:
 
             endtime = time_2 - time_1
 
-            if endtime != finaltime:
-                print(f"you did it in  {endtime} seconds")
+            print(f"you did it in  {endtime} maxis")
 
             finaltime = endtime + finaltime
 

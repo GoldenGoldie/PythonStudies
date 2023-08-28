@@ -1,30 +1,10 @@
 import random
 
-calculationsymbol = input ("hello")
+number_1 = 1
 
-calculate = 0
+number_2 = 20
 
-number_1 = random.randrange(1,15)
-
-number_2 = random.randrange(1,5)
-
-c = 0
-
-def Calculation():
-    if calculationsymbol == "+":
-       return number_1 + number_2 
-        
-    if calculationsymbol == "-":
-        i = number_1 - number_2
-
-    if calculationsymbol == "*":
-        i = number_1 * number_2
-
-    if calculationsymbol == "/":
-        i = number_1 / number_2 
+number_3 = random.randrange(number_1,number_2)
 
 
-c = Calculation()
-
-print(c)
-
+print(number_3)
