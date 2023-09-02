@@ -8,24 +8,30 @@ print("what do you want to learn?")
 
 end_control = True
 
+# this method is for the calculations
+
 
 def Calculation():
-        print(f" {number_1} {calculationsymbol} {number_2}")
+    print(f" {number_1} {calculationsymbol} {number_2}")
 
-        if calculationsymbol == "+":
-            return  number_1 + number_2 
-        
-        if calculationsymbol == "-":
-            return number_1 - number_2
+    if calculationsymbol == "+":
+        return number_1 + number_2
 
-        if calculation == "*":
-            return number_1 * number_2
+    if calculationsymbol == "-":
+        return number_1 - number_2
 
-        if calculationsymbol == "/":
-            return number_1 / number_2 
-        
-        if calculationsymbol == "squaring":
-            return number_1 * number_2
+    if calculation == "*":
+        return number_1 * number_2
+
+    if calculationsymbol == "/":
+        return number_1 / number_2
+
+    if calculationsymbol == "squaring":
+        return number_1 * number_2
+
+
+# this checks if a number is a number
+
 
 def CheckIfIsDigit(i):
     if i.isdigit():
@@ -33,6 +39,8 @@ def CheckIfIsDigit(i):
 
     return "no Number"
 
+
+# this is used to know which mode is chosen
 
 while True:
     control_1 = False
@@ -56,14 +64,14 @@ while True:
     if control_1 == False:
         print("don't do this!")
     if control_2:
-        calculationsymbol = input("Do you want to practice +, -, *, / or squaring you can also choose the random mode and you can stop practicing if you enter end: ")
+        calculationsymbol = input(
+            "Do you want to practice +, -, *, / or squaring you can also choose the random mode and you can stop practicing if you enter end: ")
 
     if control_1 == False:
         calculationsymbol = "end"
 
     if calculationsymbol == "end":
         break
-
 
     print("How many calculations do you want to do?")
 
@@ -83,10 +91,11 @@ while True:
         loops_control = False
         print("Do not do this!")
 
-
+    # those are the modes
     while loops_control:
+        # the code below takes the time when you start
 
-        time_1 = time.time()
+        time_start = time.time()
 
         if mode == "random":
             random_1 = random.randrange(1, 3)
@@ -176,6 +185,8 @@ while True:
             print("don't try this again!")
             control_1 = False
 
+        # this is the result
+
         if control_1:
             result_human = input("What is your result?")
 
@@ -188,22 +199,25 @@ while True:
             if result_human == calculate_2:
                 print("correct")
                 control_1 = True
-                
 
             if result_human_1 != calculate_2:
                 print("wrong")
                 print(calculate_2)
                 control_1 = True
 
-            time_2 = time.time()
+            # this part below is part of a stopwatch and it takes your time after you finished one calculation
 
-            endtime = time_2 - time_1
+            time_end = time.time()
 
-            print(f"you did it in  {endtime} maxis")
+            # this part of the stopwatch is going to subtract the "time_end" and the "time_start"
+
+            endtime = time_end - time_start
+
+            print(f"you did it in  {endtime} seconds")
+
+            # this is your finatime after you calculated some calculations
 
             finaltime = endtime + finaltime
-
-            
 
             loops += 1
 
@@ -212,4 +226,3 @@ while True:
         if loops_control == False:
             end_control = False
             print(f"your final time is {finaltime}")
-
