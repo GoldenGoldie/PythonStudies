@@ -1,10 +1,5 @@
 import random
 
-number_1 = 1
+number_1random = random.randrange(1,10)+ random.randrange(10,15)
 
-number_2 = 20
-
-number_3 = random.randrange(number_1,number_2)
-
-
-print(number_3)
+print(number_1random)
