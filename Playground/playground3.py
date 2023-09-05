@@ -1,7 +1,12 @@
 import random
 def numbergenerator():
-        if mode == "easy" :
-            if calculationsymbol == "+" or "-":
+
+
+    if mode == "easy" or mode == "e" :
+
+        if t == 0:
+            
+            if calculationsymbol == "+" or calculationsymbol == "-":
                 number_1 = random.randrange(10,50)
 
             if calculationsymbol == "*":
@@ -11,7 +16,15 @@ def numbergenerator():
                 number_1 = random.randrange(1,25)
 
 
-        if mode == "medium":
+        if t == 1:
+
+            if calculationsymbol == "/":
+                number_1 = 2
+
+
+    if mode == "medium" or mode == "m":
+            
+        if t == 0:
             if calculationsymbol == "+" or "-":
                 number_1 =  random.randrange(100,200)
 
@@ -21,7 +34,13 @@ def numbergenerator():
             if calculationsymbol == "/":
                 number_1 = random.randrange(10,100)
 
-        if mode == "hard":
+        if t == 1:
+          number_1 = random.randrange(2,10)
+
+    if mode == "hard" or mode == "h" :
+            
+        if t == 0:
+
             if calculationsymbol == "+" or "-":
                 number_1 = random.randrange(50,500)
         
@@ -31,8 +50,10 @@ def numbergenerator():
             if calculationsymbol == "/":
                 number_1 = random.randrange(50,500)
 
+        if t == 1:
+            number_1 = random.randrange(2,25)
         
-        return number_1
+    return  number_1
 
 
 
@@ -46,9 +67,11 @@ while f:
     if calculationsymbol == "suaring":
         calculationsymbol = "*"
 
-
+    t = 0
 
     x = numbergenerator()
+    if calculationsymbol == "/":
+     t = 1
 
     y = numbergenerator()
 
