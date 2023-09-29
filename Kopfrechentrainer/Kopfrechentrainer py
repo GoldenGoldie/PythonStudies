@@ -6,6 +6,63 @@ finaltime = 0
 
 print("what do you want to learn?")
 
+#this method is so numbers will be generated
+def numbergenerator():
+    if mode == "easy" or mode == "e" :
+
+        if t == 0:
+            
+            if calculationsymbol == "+" or calculationsymbol == "-":
+                number_1 = random.randrange(10,50)
+
+            if calculationsymbol == "*" or calculationsymbol == "squaring":
+                number_1 = random.randrange(1,25)
+
+            if calculationsymbol == "/":
+                number_1 = random.randrange(1,25)
+
+
+
+
+        if t == 1:
+
+            if calculationsymbol == "/":
+                number_1 = 2
+
+
+    if mode == "medium" or mode == "m":
+            
+        if t == 0:
+            if calculationsymbol == "+" or "-":
+                number_1 =  random.randrange(100,200)
+
+            if calculationsymbol == "*":
+                number_1 = random.randrange(10,25)
+
+            if calculationsymbol == "/":
+                number_1 = random.randrange(10,100)
+
+        if t == 1:
+          number_1 = random.randrange(2,10)
+
+    if mode == "hard" or mode == "h" :
+            
+        if t == 0:
+
+            if calculationsymbol == "+" or "-":
+                number_1 = random.randrange(50,500)
+        
+            if calculationsymbol == "*":
+                number_1 = random.randrange(25,50)
+        
+            if calculationsymbol == "/":
+                number_1 = random.randrange(50,500)
+
+        if t == 1:
+            number_1 = random.randrange(2,25)
+        
+    return  number_1
+
 end_control = True
 
 # this method is for the calculations
@@ -125,58 +182,13 @@ while True:
 
             control_1 = True
 
-        if mode == "easy":
-            if calculationsymbol == "*":
-                number_1 = random.randrange(1, 10)
-                number_2 = random.randrange(1, 20)
-                control_1 = True
+        t = 0
 
-            if calculationsymbol == "+":
-                number_1 = random.randrange(20, 150)
-                number_2 = random.randrange(20, 150)
-                control_1 = True
-
-            if calculationsymbol == "-":
-                number_1 = random.randrange(20, 150)
-                number_2 = random.randrange(20, 75)
-                control_1 = True
-
-            if calculationsymbol == "/":
-                number_1 = random.randrange(25, 150)
-                number_2 = random.randrange(2)
-                control_1 = True
-
-            if calculationsymbol == "squaring":
-                number_1 = random.randrange(1, 10)
-                number_2 = number_1
-                control_1 = True
-
-        if mode == "hard":
-            if calculationsymbol == "+":
-                number_1 = random.randrange(50, 500)
-                number_2 = random.randrange(110, 700)
-                control_1 = True
-
-            if calculationsymbol == "-":
-                number_1 = random.randrange(25, 500)
-                number_2 = random.randrange(25, 700)
-                control_1 = True
-
-            if calculationsymbol == "*":
-                number_1 = random.randrange(25, 150)
-                number_2 = random.randrange(2, 25)
-                control_1 = True
-
-            if calculationsymbol == "/":
-                print("You only have to write the first numbers in front")
-                number_1 = random.randrange(50, 500)
-                number_2 = random.randrange(2, 20)
-                control_1 = True
-
-            if calculationsymbol == "squaring":
-                number_1 = random.randrange(10, 30)
-                number_2 = number_1
-                control_1 = True
+        number_1 = numbergenerator()
+        
+        t = 1
+        
+        number_2 =numbergenerator()
 
         calculate = Calculation()
 

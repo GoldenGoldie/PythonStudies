@@ -9,11 +9,13 @@ def numbergenerator():
             if calculationsymbol == "+" or calculationsymbol == "-":
                 number_1 = random.randrange(10,50)
 
-            if calculationsymbol == "*":
+            if calculationsymbol == "*" or calculationsymbol == "squaring":
                 number_1 = random.randrange(1,25)
 
             if calculationsymbol == "/":
                 number_1 = random.randrange(1,25)
+
+
 
 
         if t == 1:
@@ -64,14 +66,13 @@ while f:
 
     calculationsymbol = input("hello2")
 
-    if calculationsymbol == "suaring":
-        calculationsymbol = "*"
-
     t = 0
+    
 
     x = numbergenerator()
     if calculationsymbol == "/":
      t = 1
+     f = 1
 
     y = numbergenerator()
 
