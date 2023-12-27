@@ -1,6 +1,6 @@
 symbol=(input("was willst du rechnen?:"))
 rechnung = symbol.split()
-x = 1
+
 
 zahl1 = int(rechnung[0])
 
