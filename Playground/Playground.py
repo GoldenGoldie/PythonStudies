@@ -1,18 +1,28 @@
-def check_square_to_2(penguin):
-    fish = True
-    while fish:
-        if penguin%2 == 0:
-            
-            penguin = penguin / 2
 
-            if penguin == 1.0:
-                return True
-            
+timerdurationsymbol = "h"
 
-        if penguin%2 != 0:
-            return False
+def CheckIfIsDigit(I):
+    if I.isdigit():
+        return int(I)
+    else:
+        return "no number"
     
+def timesymbol(I):
+    if I == "sec" or I == "s":
+        return 1
+    if I == "min" or I == "m":
+        return 60 
+    if I == "hour" or I == "h":
+        return 3600
 
-x = check_square_to_2(128)
+def Checkiftimesymbol(I):
+    I = timerdurationsymbol
+    Y = CheckIfIsDigit(I)
 
-print(x)
+    if Y == "no number":
+        I = timesymbol(I)
+        return I
+    
+timerdurationsymbol = Checkiftimesymbol(timerdurationsymbol)
+
+print(timerdurationsymbol)
