@@ -121,8 +121,7 @@ while True:
     if control_1 == False:
         print("don't do this!")
     if control_2:
-        calculationsymbol = input(
-            "Do you want to practice +, -, *, / or squaring you can also choose the random mode and you can stop practicing if you enter end: ")
+        calculationsymbol = input("Do you want to practice +, -, *, / or squaring you can also choose the random mode and you can stop practicing if you enter end: ")
 
     if control_1 == False:
         calculationsymbol = "end"
