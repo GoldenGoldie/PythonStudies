@@ -20,12 +20,12 @@ root.rowconfigure(0, weight=1)
 feet = StringVar()
 feet_entry = ttk.Entry(mainframe, width=7, textvariable=feet)
 feet_entry.grid(column=2, row=1, sticky=(W, E))
-#Widget
+#Text meters
 meters = StringVar()
 ttk.Label(mainframe, textvariable=meters).grid(column=2, row=2, sticky=(W, E))
-
+#Button
 ttk.Button(mainframe, text="Calculate", command=calculate).grid(column=3, row=3, sticky=W)
-
+#Text
 ttk.Label(mainframe, text="feet").grid(column=3, row=1, sticky=W)
 ttk.Label(mainframe, text="is equivalent to").grid(column=1, row=2, sticky=E)
 ttk.Label(mainframe, text="meters").grid(column=3, row=2, sticky=W)
