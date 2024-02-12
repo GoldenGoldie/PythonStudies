@@ -1,4 +1,3 @@
-
 geheimnis = 1337
 versuch = 0
 zaehler = 0
@@ -12,7 +11,7 @@ while versuch != geheimnis:
     if versuch > geheimnis:
         print("zu groß")
 
-    zaehler=zaehler + 1
+    zaehler = zaehler + 1
 
     if versuch == geheimnis:
-        print("super, du hast es in",zaehler,"Versuchen geschafft gut Arbeit")
+        print("super, du hast es in", zaehler, "Versuchen geschafft gut Arbeit")
