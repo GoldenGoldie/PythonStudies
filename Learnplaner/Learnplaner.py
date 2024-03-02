@@ -18,7 +18,7 @@ if daysleft != "no number" or time_day != "no number":
 else:
     timedayminutes = "no number"
     
-counter = 0
+counter = 0.0
 
 easy_task = 5
 
