@@ -3,12 +3,3 @@ def numbercheck(i):
         return int(i)
     else:
         return "no number"
-    
-x = "f"
-
-y = "2"
-
-x =numbercheck(x)
-print(x)
-y = numbercheck(y)
-print(y)
